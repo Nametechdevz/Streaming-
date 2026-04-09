@@ -1,0 +1,19 @@
+{
+  "name": "iptv-streaming-platform",
+  "version": "1.0.0",
+  "description": "IPTV Streaming Platform with DNS/Xtream Codes support, Admin Panel, and Mobile App",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "admin-panel",
+    "mobile-app"
+  ],
+  "scripts": {
+    "backend": "cd backend && npm run dev",
+    "admin": "cd admin-panel && npm start",
+    "start:all": "concurrently \"npm run backend\" \"npm run admin\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

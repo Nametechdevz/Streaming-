@@ -1,4 +1,22 @@
 {
-  "name": "IPTVApp",
-  "displayName": "IPTV Stream"
+  "expo": {
+    "name": "IPTV Stream",
+    "slug": "iptv-stream",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0a0a0f"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#e50914"
+      },
+      "package": "com.iptvstream.app"
+    },
+    "ios": {
+      "bundleIdentifier": "com.iptvstream.app"
+    }
+  }
 }

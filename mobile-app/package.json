@@ -5,7 +5,13 @@
   "scripts": {
     "start": "npx expo start",
     "android": "npx expo run:android",
-    "ios": "npx expo run:ios"
+    "ios": "npx expo run:ios",
+    "generate-assets": "node generate-assets.js",
+    "build:apk": "npx eas-cli build --platform android --profile production --local",
+    "build:apk:preview": "npx eas-cli build --platform android --profile preview",
+    "build:apk:dev": "npx eas-cli build --platform android --profile development",
+    "prebuild": "npx expo prebuild --platform android --clean",
+    "postinstall": "node generate-assets.js"
   },
   "dependencies": {
     "expo": "~54.0.0",
@@ -24,6 +30,7 @@
     "axios": "^1.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "eas-cli": "^14.0.0"
   }
 }
